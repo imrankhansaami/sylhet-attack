@@ -1,0 +1,23 @@
+# compiled game
+/SylhetAttack.exe
+*.exe
+*.o
+*.obj
+*.dll
+
+# build and packaging output (large, reproducible with build.bat / package.ps1)
+/build/
+/dist/
+
+# runtime output
+/probe.csv
+/shot_manual.png
+/benchmark*.csv
+/benchmark*.txt
+/video/*.avi
+
+# editor / OS clutter
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
