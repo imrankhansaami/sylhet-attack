@@ -78,8 +78,9 @@ system libraries that ship with Windows; no code from them is redistributed.
 
 3. PHOTOGRAPHIC TEXTURES (optional, assets\textures\)
 -----------------------------------------------------
-105 JPEG files from Poly Haven (https://polyhaven.com), used under the
-Creative Commons CC0 1.0 Universal licence (public domain dedication):
+The optional texture pack contains JPEG photographs from Poly Haven
+(https://polyhaven.com), used under the Creative Commons CC0 1.0 Universal
+licence (public domain dedication):
 
   https://creativecommons.org/publicdomain/zero/1.0/
 

@@ -198,7 +198,7 @@ a flight frame, because the briefing card pauses the scene until a key is presse
 | `--demo`, `--demotime <seconds>` | Cinematic demo; jump to a time. |
 | `--landmark <0–9>` | Jump to a landmark; skips the briefing. |
 | `--at <x> <z> <y>` | Place the aircraft at an exact position for a capture. |
-| `--diff <0|1|2>` | Easy / Normal / Ace. |
+| `--diff <0\|1\|2>` | Easy / Normal / Ace. |
 | `--nobrief` | Skip the briefing card. |
 | `--noenemy`, `--autofire` | Quiet capture or automatic cannon fire. |
 | `--results` | Show a completed results screen. |
