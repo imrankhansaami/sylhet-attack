@@ -43,7 +43,9 @@ New-Item -ItemType Directory -Force -Path (Join-Path $run 'evidence') | Out-Null
 Copy-Item 'SylhetAttack.exe' $run -Force
 Copy-Item 'run.bat' $run -Force
 Copy-Item 'README.md' $run -Force
+Copy-Item 'LICENSE' $run -Force
 Copy-Item 'LICENSES.txt' $run -Force
+Copy-Item 'CONTRIBUTING.md' $run -Force
 New-Item -ItemType Directory -Force -Path (Join-Path $run 'docs') | Out-Null
 Copy-Item 'docs\DEFENCE_SCRIPT.md' (Join-Path $run 'docs') -Force
 if (Test-Path 'docs\THESIS_OUTLINE.md') { Copy-Item 'docs\THESIS_OUTLINE.md' (Join-Path $run 'docs') -Force }
@@ -60,7 +62,7 @@ SYLHET ATTACK - how to run this copy
 1. Double-click SylhetAttack.exe  (or run.bat). Nothing is installed and no
    DLLs are needed: the game is a single static executable.
 
-2. On the title screen: click a mission or press 1-5, or press D for the
+2. On the title screen: click a mission or press 1-4, or press D for the
    cinematic city demo. Press H while flying for the full control list.
 
 3. The video of the cinematic demo is in video\demo.avi (Windows Media Player,
@@ -75,7 +77,7 @@ SYLHET ATTACK - how to run this copy
 5. To rebuild from source, take SylhetAttack-source.zip, unpack it and run
    build.bat (MinGW g++ required; freeglut is vendored and builds itself).
 
-Licences and attribution: LICENSES.txt
+Licences and attribution: LICENSE (MIT) and LICENSES.txt (third-party).
 '@
 Set-Content -Path (Join-Path $run 'RUN_ME_FIRST.txt') -Value $first -Encoding UTF8
 
@@ -116,7 +118,7 @@ foreach ($item in @('src', 'tools', 'docs', 'third_party', 'assets'))
 {
     if (Test-Path $item) { Copy-Item $item (Join-Path $staging $item) -Recurse -Force }
 }
-foreach ($f in @('build.bat', 'run.bat', 'README.md', 'LICENSES.txt'))
+foreach ($f in @('build.bat', 'run.bat', 'README.md', 'LICENSE', 'LICENSES.txt', 'CONTRIBUTING.md'))
 {
     if (Test-Path $f) { Copy-Item $f $staging -Force }
 }

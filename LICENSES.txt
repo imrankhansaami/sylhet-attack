@@ -4,8 +4,8 @@ SYLHET ATTACK - LICENCES AND ATTRIBUTION
 A computer graphics thesis project.
 Department of Computer Science and Engineering, Sylhet International University.
 
-Author      : [ student name ]  ([ student ID ])
-Supervisor  : [ supervisor name ]
+Author      : Imran Khan  (Roll 44008)
+Supervisor  : Arnod Debnat
 Year        : 2026
 
 
@@ -22,7 +22,11 @@ Everything that makes up the simulator itself is written for this project:
 No model files, sound files or map data are used. Textures are optional and
 described in section 3.
 
-Copyright (c) 2026 [ student name ]. Submitted as academic coursework.
+Copyright (c) 2026 Imran Khan. Submitted as academic coursework.
+
+The original code and generated content in this repository are released under
+the MIT licence; the full text is in the top-level LICENSE file. Third-party
+components keep their own licences, recorded below.
 
 
 2. THIRD-PARTY CODE (compiled into SylhetAttack.exe)
@@ -63,6 +67,11 @@ and Perlin noise. Vendored under third_party/stb.
   option). Author: Sean Barrett and contributors, http://nothings.org/stb
   "no warranty implied; use at your own risk".
 
+glad 2.0.8 - OpenGL loader generated for the experimental GL3 renderer under
+src\gl3\. It is vendored under third_party\glad and is not compiled by the
+shipping build.bat. The generated files carry their own SPDX licence notice in
+the header (WTFPL OR CC0-1.0 AND Apache-2.0).
+
 OpenGL, GLU and the Windows multimedia API (winmm) are used through the
 system libraries that ship with Windows; no code from them is redistributed.
 
@@ -102,10 +111,11 @@ case no third-party content is used at all.
 The billboard artwork in this folder - "IMRAN INTERNATIONAL AIRLINES"
 (imran_billboard.jpg), "AL-AMIN ENTERPRISES" (alamin_billboard.jpg) and the
 group photograph (photo_billboard.jpg) - was produced for this project and is
-part of it, covered by the same copyright as the source code in section 1. It
-is not third-party material. Replace any of those files with your own image and
-rebuild if a different design is wanted; if a file is missing the sign is drawn
-in code instead.
+part of it, released under the same MIT licence as the source code in section 1.
+It is not third-party material. The names on the boards are part of the
+presentation; replace any of those files with your own image and rebuild if a
+different design is wanted. If a file is missing the sign is drawn in code
+instead.
 
 5. HOW TO REBUILD FROM SOURCE
 -----------------------------

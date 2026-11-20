@@ -14,7 +14,7 @@ MissionState gMission;
 // tables
 // ---------------------------------------------------------------------
 static const char* NAME[MIS_COUNT] = {
-    "Patrol",
+    "Instant Action",
     "BAF Training Range",
     "Defend the City",
     "Deck Run",
@@ -22,9 +22,9 @@ static const char* NAME[MIS_COUNT] = {
 };
 
 static const char* DESC[MIS_COUNT] = {
-    "Patrol the city with four bandits in the air. Land anywhere for a landing rating.",
+    "Four bandits over the Surma - a quick dogfight with no briefing.",
     "Bangladesh Air Force training range - the peaceful mission. No hostiles: engine start, taxi, take off, fly the pattern and land.",
-    "Enemy fighters are working over the city. Show the damage at five landmarks and drive the bandits off while you do it.",
+    "Defend the City: three bomber raids are inbound. Protect Keane Bridge, the Clock Tower and the Shahjalal Mazar, then land anywhere. City integrity below 45% fails.",
     "Deck Run: three gates low over the Surma and Keane Bridge, with anti-aircraft fire from the banks.",
     "Strike and Return: hit the convoy and the depot on the airport road, then land on runway 05 - the landing grade is half the score."
 };
@@ -332,7 +332,7 @@ const char* missionObjective()
     switch (gMission.id)
     {
         case MIS_FREE:
-            return "Free flight - land anywhere for a rating";
+            return "Instant Action - clear the sky";
         case MIS_SCHOOL:
             switch (gMission.step)
             {

@@ -454,7 +454,12 @@ static void gameJumpToLandmark(int i)
 static void gameStartInstantAction()
 {
     gInstantAction = true;
+    // Instant Action is one click into the fight: never stop at a briefing
+    // (the title button and --instant both come through here).
+    bool briefing = gStartBriefing;
+    gStartBriefing = false;
     gameStartMission(MIS_FREE);
+    gStartBriefing = briefing;
 
     V3 start = v3(900.0f, 0.0f, 1500.0f);
     craftReset(gAircraft, start, deg2rad(15.0f), true, 64.0f, 0.0f, true);
@@ -915,7 +920,7 @@ void gameInit()
         gMission.stars = 3;
         gMission.score = 2140.0f;
         gMission.countDone = gMission.countTotal;
-        snprintf(gMission.resultLine, sizeof(gMission.resultLine), "All five landmarks visited");
+        snprintf(gMission.resultLine, sizeof(gMission.resultLine), "All three raids stopped, city 100%%");
         gMission.endTimer = 3.0f;
     }
 
@@ -923,7 +928,11 @@ void gameInit()
     // presentation (or a capture script) can go to any landmark in one command
     if (gStartLandmark >= 0)
     {
+        // the jump is a presentation shortcut, so skip the briefing card
+        bool briefing = gStartBriefing;
+        gStartBriefing = false;
         gameStartMission(MIS_FREE);
+        gStartBriefing = briefing;
         gameJumpToLandmark(gStartLandmark);
     }
 

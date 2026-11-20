@@ -33,6 +33,10 @@ int main(int argc, char** argv)
         else if (strcmp(argv[i], "--tour") == 0) gStartWithMission = MIS_TOUR;
         else if (strcmp(argv[i], "--rings") == 0) gStartWithMission = MIS_RINGS;
         else if (strcmp(argv[i], "--landing") == 0) gStartWithMission = MIS_LANDING;
+        else if (strcmp(argv[i], "--defend") == 0) gStartWithMission = MIS_TOUR;
+        else if (strcmp(argv[i], "--deck") == 0) gStartWithMission = MIS_RINGS;
+        else if (strcmp(argv[i], "--strike") == 0) gStartWithMission = MIS_LANDING;
+        else if (strcmp(argv[i], "--training") == 0) gStartWithMission = MIS_SCHOOL;
         else if (strcmp(argv[i], "--probe") == 0) gProbe = true;
         else if (strcmp(argv[i], "--at") == 0 && i + 3 < argc)
         {
